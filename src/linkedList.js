@@ -28,7 +28,7 @@ class LinkedList {
     prepend(value) {
         const newNode = new Node(value);
         // If this is the first node (i.e., head doesn't exist yet), insert to the head and tail
-        if(!this.head) {
+        if (!this.head) {
             this.head = newNode;
             this.tail = newNode;
         }
