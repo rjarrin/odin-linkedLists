@@ -123,6 +123,43 @@ class LinkedList {
         }
         return null;
     }
+
+    // Inserts a new node with the provided value at the given index
+    insertAt(value, index) {
+        // Return null for invalid indices
+        if (index < 0 || index > this.size) return;
+        const newNode = new Node(value);
+        // Case: Insert as head
+        if (index === 0) {
+            this.prepend(value);
+        } else {
+            // Get node behind the current index
+            const prevNode = this.at(index - 1);
+            newNode.nextNode = prevNode.nextNode;
+            prevNode.nextNode = newNode;
+            if (newNode.nextNode === null) {
+                this.tail = newNode;
+            }
+            this.size += 1;
+        }
+    }
+
+    // Removes the node at the given index
+    removeAt(index) {
+        // Return null for invalid indices
+        if (index < 0 || index >= this.size) return;
+        // Case: Remove list head
+        if (index === 0) {
+            this.head = this.head.nextNode;
+        } else {
+            const prevNode = this.at(index - 1);
+            if (prevNode.nextNode === this.tail) {
+                this.tail = prevNode;
+            }
+            prevNode.nextNode = prevNode.nextNode.nextNode;
+            this.size -= 1;
+        }
+    }
 }
 
 export default LinkedList;

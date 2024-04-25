@@ -44,7 +44,14 @@ console.log(`Find index of 2: ${myList.find(2)}`); // Should print 2
 console.log(`Find index of 4: ${myList.find(4)}\n`); // Should print null
 
 // Test insertAt()
+console.log('Inserting 1.5 at index 1...');
+myList.insertAt(1.5, 1);
+console.log(`${myList.toString()}\n`); // Should print (0) -> (1.5) -> (1) -> (2) -> null
 
 // Test removeAt()
+console.log('Removing node at index 1...');
+myList.removeAt(1);
+console.log(`${myList.toString()}\n`); // Should print (0) -> (1) -> (2) -> null
 
 console.log('Reached the end of index.js');
+console.log('All tests completed successfully');
