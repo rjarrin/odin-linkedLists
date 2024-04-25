@@ -40,6 +40,8 @@ console.log(`Contains 1: ${myList.contains(1)}`); // Should be true
 console.log(`Contains 4: ${myList.contains(4)}\n`); // Should be false
 
 // Test find()
+console.log(`Find index of 2: ${myList.find(2)}`); // Should print 2
+console.log(`Find index of 4: ${myList.find(4)}\n`); // Should print null
 
 // Test insertAt()
 
