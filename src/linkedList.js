@@ -101,6 +101,16 @@ class LinkedList {
         // Decrement the size
         this.size -= 1;
     }
+
+    // Returns true if the passed in value is in the list, else returns false
+    contains(value) {
+        let currentNode = this.head;
+        while (currentNode) {
+            if (currentNode.value === value) return true;
+            currentNode = currentNode.nextNode;
+        }
+        return false;
+    }
 }
 
 export default LinkedList;

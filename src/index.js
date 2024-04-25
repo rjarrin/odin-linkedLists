@@ -36,6 +36,8 @@ myList.pop();
 console.log(`${myList.toString()}\n`); // Should print (0) -> (1) -> (2) -> null
 
 // Test contains()
+console.log(`Contains 1: ${myList.contains(1)}`); // Should be true
+console.log(`Contains 4: ${myList.contains(4)}\n`); // Should be false
 
 // Test find()
 
