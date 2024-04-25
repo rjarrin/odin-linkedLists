@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import LinkedList from './linkedList.js';
 
 // Test: Create a new LinkedList instance
@@ -30,6 +31,9 @@ console.log(`Node at index 10: ${myList.at(10).value}`); // Should be undefined
 console.log(`Node at index -1: ${myList.at(-1).value}\n`); // Should be undefined
 
 // Test pop()
+console.log('Popping the last element...');
+myList.pop();
+console.log(`${myList.toString()}\n`); // Should print (0) -> (1) -> (2) -> null
 
 // Test contains()
 

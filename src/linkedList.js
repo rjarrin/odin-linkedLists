@@ -41,6 +41,18 @@ class LinkedList {
         this.size += 1;
     }
 
+    // Convert list elements to string for viewing/testing
+    toString() {
+        let currentNode = this.head;
+        let result = '';
+        // Iteratte through the list
+        while (currentNode) {
+            result += `${currentNode.value} -> `;
+            currentNode = currentNode.nextNode;
+        }
+        return `${result}null`;
+    }
+
     // Returns the total number of nodes in the list
     getSize() {
         return this.size;
@@ -68,16 +80,26 @@ class LinkedList {
         return currentNode;
     }
 
-    // Convert list elements to string for viewing/testing
-    toString() {
-        let currentNode = this.head;
-        let result = '';
-        // Iteratte through the list
-        while (currentNode) {
-            result += `${currentNode.value} -> `;
-            currentNode = currentNode.nextNode;
+    // Removes the last element from the list
+    pop() {
+        // If the list is empty, return null
+        if (!this.head) return;
+        // Case: Only one element in the list
+        if (this.head === this.tail) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            let currentNode = this.head;
+            // Iterate to second last element
+            while (currentNode.nextNode !== this.tail) {
+                currentNode = currentNode.nextNode;
+            }
+            // Set the tail to the current node
+            this.tail = currentNode;
+            this.tail.nextNode = null;
         }
-        return `${result}null`;
+        // Decrement the size
+        this.size -= 1;
     }
 }
 
