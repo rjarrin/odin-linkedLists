@@ -11,15 +11,18 @@ myList.append(3);
 console.log(`${myList.toString()} \n`); // Should print: (1) -> (2) -> (3) -> null
 
 // Test prepend()
-console.log("Prepending value (0)...");
+console.log('Prepending value (0)...');
 myList.prepend(0);
 console.log(`${myList.toString()} \n`); // Should print: (0) -> (1) -> (2) -> (3) -> null
 
-// Test size()
+// Test getSize()
+console.log(`Size of the list: ${myList.getSize()}\n`); // Should print: 4
 
-// Test head()
+// Test getHead()
+console.log(`Head of the list: ${myList.getHead().value}\n`); // Should print: 0
 
-// Test tail()
+// Test getTail()
+console.log(`Tail of the list: ${myList.getTail().value}\n`); // Should print: 3
 
 // Test at()
 

@@ -37,6 +37,23 @@ class LinkedList {
             newNode.nextNode = this.head;
             this.head = newNode;
         }
+        // Increment the list size
+        this.size += 1;
+    }
+
+    // Returns the total number of nodes in the list
+    getSize() {
+        return this.size;
+    }
+
+    // Returns the first node in the list
+    getHead() {
+        return this.head;
+    }
+
+    // Returns the last node in the list
+    getTail() {
+        return this.tail;
     }
 
     // Convert list elements to string for viewing/testing
