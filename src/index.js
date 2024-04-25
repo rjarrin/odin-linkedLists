@@ -25,6 +25,9 @@ console.log(`Head of the list: ${myList.getHead().value}\n`); // Should print: 0
 console.log(`Tail of the list: ${myList.getTail().value}\n`); // Should print: 3
 
 // Test at()
+console.log(`Node at index 2: ${myList.at(2).value}`); // Should print: 2
+console.log(`Node at index 10: ${myList.at(10).value}`); // Should be undefined
+console.log(`Node at index -1: ${myList.at(-1).value}\n`); // Should be undefined
 
 // Test pop()
 

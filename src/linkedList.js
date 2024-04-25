@@ -56,6 +56,18 @@ class LinkedList {
         return this.tail;
     }
 
+    // Returns the node at the given 'index'
+    at(index) {
+        // Return null for invalid indices or empty lists
+        if (index < 0 || index >= this.size) return 'null';
+        let currentNode = this.head;
+        // Iterate through list until index is reached
+        for (let i = 0; i < index; i += 1) {
+            currentNode = currentNode.nextNode;
+        }
+        return currentNode;
+    }
+
     // Convert list elements to string for viewing/testing
     toString() {
         let currentNode = this.head;
